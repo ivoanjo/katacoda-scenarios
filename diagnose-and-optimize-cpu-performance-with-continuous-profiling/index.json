@@ -37,6 +37,9 @@
     },
     "finish": {
       "text": "finish.md"
+    },
+    "assets": {
+      "host01": [ {"file": "dd-continuous-profiler-example/**/*.*", "target": "/root"} ]
     }
   },
   "environment": {
