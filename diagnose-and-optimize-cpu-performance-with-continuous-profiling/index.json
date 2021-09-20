@@ -1,0 +1,48 @@
+{
+  "title": "Diagnose and optimize CPU performance with Continuous Profiling",
+  "description": "In this workshop, you will learn to diagnose production CPU performance problems in your applications. By using Continuous Profiling, you will be able to quickly uncover costly bugs, and identify improvements that will lead to a happier end-user experience and a reduced infrastructure bill.",
+  "difficulty": "Beginner",
+  "time": "60 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Start the example service",
+        "text": "step1.md"
+      },
+      {
+        "title": "Recognize performance issue",
+        "text": "step2.md"
+      },
+      {
+        "title": "Enable Datadog APM and Continuous Profiling",
+        "text": "step3.md"
+      },
+      {
+        "title": "Pinpoint performance issue using Tracing",
+        "text": "step4.md"
+      },
+      {
+        "title": "Diagnose performance issue using Profiling",
+        "text": "step5.md"
+      },
+      {
+        "title": "Fix performance issue and validate fix",
+        "text": "step6.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "editor-terminal",
+    "uieditorpath": "/root/lab",
+    "hideHiddenFiles": true
+  },
+  "backend": {
+    "imageid": "datadog-base-v3"
+  }
+}
