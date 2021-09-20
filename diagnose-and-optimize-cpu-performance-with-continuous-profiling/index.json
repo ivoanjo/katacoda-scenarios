@@ -46,7 +46,7 @@
       {
         "name": "movies-api-java service",
         "port": 8081
-      },
+      }
     ],
     "hideHiddenFiles": true
   },
