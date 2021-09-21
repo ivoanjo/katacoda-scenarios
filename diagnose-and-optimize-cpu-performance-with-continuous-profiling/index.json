@@ -45,6 +45,7 @@
   "environment": {
     "uilayout": "editor-terminal",
     "uieditorpath": "/root/lab",
+    "showdashboard": true,
     "dashboards": [
       {
         "name": "movies-api-java service",
