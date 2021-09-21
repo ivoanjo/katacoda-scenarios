@@ -27,6 +27,10 @@ TODO: Check agent is healthy
 
 * Step 4: Instrument your application
 
+1. Modify `dd-continuous-profiler-example/java/build.gradle`{{open}}
+
+<pre class="file" data-filename="app.js" data-target="insert" data-marker="applicationDefaultJvmArgs">potato-testing</pre>
+
 1. (Enable all the extras)
 2. (Re-run app)
 
