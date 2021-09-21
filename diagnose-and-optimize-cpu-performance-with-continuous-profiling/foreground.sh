@@ -4,7 +4,8 @@ statuscheck "Bootstrap"
 
 echo "background"
 
-mkdir /root/lab
+tree /root/dd-continuous-profiler-example
+
 cp -r /root/dd-continuous-profiler-example /root/lab/.
 
 cd dd-continuous-profiler-example
