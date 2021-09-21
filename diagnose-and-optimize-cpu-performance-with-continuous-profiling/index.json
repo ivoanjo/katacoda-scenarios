@@ -6,7 +6,7 @@
   "details": {
     "steps": [
       {
-        "title": "Start the example service",
+        "title": "Start the movies-api-java service",
         "text": "step1.md"
       },
       {
