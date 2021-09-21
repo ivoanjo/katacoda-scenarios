@@ -52,7 +52,7 @@
         "port": 8081
       }
     ],
-    "terminals": [{"name": "Terminal for movies-api-java", "target": "host01", "command": "top"}],
+    "terminals": [{"name": "Terminal for movies-api-java", "target": "host01"}],
     "hideHiddenFiles": true
   },
   "backend": {
