@@ -1,5 +1,3 @@
-# Enable Datadog APM and Continuous Profiling
-
 As part of the training environment, a Datadog test account was created for you to use.
 This account will be used for our experiments.
 

@@ -1,5 +1,3 @@
-# Recognize performance issue
-
 So far so good, everything seems to be going well in `movies-api-java`-land.
 
 ---

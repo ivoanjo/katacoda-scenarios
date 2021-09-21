@@ -1,5 +1,3 @@
-# Starting the movies-api-java service
-
 As a running example, we'll use the `movies-api-java` service from
 <https://github.com/ivoanjo/dd-continuous-profiler-example>.
 
