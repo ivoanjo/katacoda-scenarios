@@ -29,6 +29,8 @@ TODO: Check agent is healthy
 
 1. Modify `dd-continuous-profiler-example/java/build.gradle`{{open}}
 
+2. Add the provided arguments:
+
 <pre class="file" data-filename="dd-continuous-profiler-example/java/build.gradle" data-target="insert" data-marker="    applicationDefaultJvmArgs = []">
     applicationDefaultJvmArgs = [
         '-javaagent:dd-java-agent.jar', '-Ddd.profiling.enabled=true', '-XX:FlightRecorderOptions=stackdepth=256',
@@ -36,9 +38,4 @@ TODO: Check agent is healthy
     ]
 </pre>
 
-1. (Enable all the extras)
-2. (Re-run app)
-
-`java -javaagent:/path/to/dd-java-agent.jar -Ddd.profiling.enabled=true -XX:FlightRecorderOptions=stackdepth=256 -Ddd.logs.injection=true -Ddd.trace.sample.rate=1 -Ddd.service=movies-api-java -Ddd.env=staging -jar path/to/your/app.jar`
-
-
+3. Re-run the application: `./gradlew run`{{execute interrupt T2}}
