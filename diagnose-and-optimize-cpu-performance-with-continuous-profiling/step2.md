@@ -1,5 +1,5 @@
 * Observe issue
   * In a new tab <https://[[HOST_SUBDOMAIN]]-8081-[[KATACODA_HOST]].environments.katacoda.com/sleep>
-  * Using curl `time curl http://localhost:8081/sleep`{{execute}}
+  * Using curl `time curl http://localhost:8081/sleep`{{execute T1}}
 
 * Let's onboard to APM

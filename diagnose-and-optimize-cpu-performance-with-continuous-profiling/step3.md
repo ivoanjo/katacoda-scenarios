@@ -17,13 +17,13 @@ docker run -d \
   -p 127.0.0.1:8126:8126/tcp \
   -e DD_API_KEY=$DD_API_KEY \
   datadog/agent:latest
-```{{execute}}
+```{{execute T1}}
 
 TODO: Check agent is healthy
 
 * Step 3: Install the Java client
 
-`wget -O dd-java-agent.jar 'https://dtdg.co/latest-java-tracer'`{{execute}}
+`wget -O dd-java-agent.jar 'https://dtdg.co/latest-java-tracer'`{{execute T1}}
 
 * Step 4: Instrument your application
 
