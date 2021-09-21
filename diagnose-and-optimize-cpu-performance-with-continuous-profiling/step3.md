@@ -20,6 +20,8 @@ docker run -d \
 ```
 {{execute}}
 
+TODO: Check agent is healthy
+
 * Step 3: Install the Java client
 
 `wget -O dd-java-agent.jar 'https://dtdg.co/latest-java-tracer'`{{execute}}
