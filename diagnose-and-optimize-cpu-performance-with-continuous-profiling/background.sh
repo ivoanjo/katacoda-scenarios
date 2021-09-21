@@ -11,7 +11,7 @@ echo "DD_API_KEY=$DD_API_KEY" > docker.env
 cd java
 ./gradlew
 
-statusupdate "Starting up..."
+statusupdate "environment to be ready..."
 
 # Download this so it'll be ready when needed in later steps
 docker pull datadog/agent:latest

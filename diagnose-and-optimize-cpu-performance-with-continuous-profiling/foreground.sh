@@ -1,9 +1,9 @@
 #!/bin/bash
 
-statuscheck "Starting up..."
+set -x
+statuscheck "environment to be ready..."
 cd /root/lab/ && clear
+echo "Starting movies-api-java..."
+set +x
 cd dd-continuous-profiler-example/java
-echo "Starting gradle..."
-./gradlew installDist
-echo "Starting app..."
-./build/install/movies-api-java/bin/movies-api-java
+./gradlew run
