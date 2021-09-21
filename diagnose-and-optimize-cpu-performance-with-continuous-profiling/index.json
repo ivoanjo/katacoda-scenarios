@@ -52,6 +52,7 @@
         "port": 8081
       }
     ],
+    "terminals": [{"name": "Terminal 2", "target": "host01"}],
     "hideHiddenFiles": true
   },
   "backend": {
