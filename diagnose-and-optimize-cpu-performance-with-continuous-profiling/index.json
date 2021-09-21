@@ -52,7 +52,7 @@
         "port": 8081
       }
     ],
-    "terminals": [{"name": "Terminal executing movies-api-java", "target": "host01", "command": "statuscheck 'environment to be ready...' && cd /root/lab/dd-continuous-profiler-example/java && ./gradlew run"}],
+    "terminals": [{"name": "Terminal for movies-api-java", "target": "host01", "command": "top"}],
     "hideHiddenFiles": true
   },
   "backend": {
