@@ -17,8 +17,7 @@ docker run -d \
   -p 127.0.0.1:8126:8126/tcp \
   -e DD_API_KEY=$DD_API_KEY \
   datadog/agent:latest
-```
-{{execute}}
+```{{execute}}
 
 TODO: Check agent is healthy
 
