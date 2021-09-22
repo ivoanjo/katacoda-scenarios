@@ -3,7 +3,7 @@ As a running example, we'll use the `movies-api-java` service from
 
 The `movies-api-service` service:
 
-* Provides an API to list and search for movies
+* Provides an API to list and search for movies.
 * Is built using Java 11, using the [Gradle build tool](https://gradle.org/), the [Spark Web Framework](https://sparkjava.com/) and the
 [Jetty web server](https://www.eclipse.org/jetty/).
 
