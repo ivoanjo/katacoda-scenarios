@@ -6,9 +6,9 @@ This account will be used for our experiments.
 for you by the lab. If you need to recall your credentials, type `creds`{{execute T1}} in the terminal.
 
 2. Navigate to the
-<a href="https://app.datadoghq.com/apm/docs?architecture=container-based&collection=Same%20host&environment=docker&language=java" target="_datadog">APM onboarding page</a>
+<a href="https://app.datadoghq.com/apm/docs?architecture=container-based&collection=Same%20host&environment=docker&language=java" target="_datadog">APM Getting started page</a>.
 
-3. Let's follow the instructions:
+3. Let's follow along the getting started instructions:
 
 * Step 1: Choose your Environment and Application Language. We pick **Docker** ➡ **Same host** → **Java**
 * Step 2: Run the Agent.
@@ -22,23 +22,26 @@ for you by the lab. If you need to recall your credentials, type `creds`{{execut
     -e DD_API_KEY=$DD_API_KEY \
     datadog/agent:latest
   ```{{execute T1}}
-  We can check if the agent is healthy using:
+  💡 Tip: We can check if the agent is healthy using:
   ```bash
   docker exec -it `docker ps --filter "expose=8126" -q` agent status
   ```{{execute T1}}
+
   ```bash
   ```
 * Step 3: Install the Java client.
   `wget -O dd-java-agent.jar 'https://dtdg.co/latest-java-tracer'`{{execute T1}}
 * Step 4: Instrument your application.
-  Set the Service name to `movies-api-java`, the Environment name to `staging`, and enable _Automatically Inject Trace and Span IDs into Logs_, _Tracing Without Limits_ and _Continuous Profiling_.
+  Set the Service name to `movies-api-java`, the Environment name to `staging`, and enable all three of
+  ✅ _Automatically Inject Trace and Span IDs into Logs_, ✅ _Tracing Without Limits_ and ✅ _Continuous Profiling_.
+  We're now ready to apply the resulting configuration snippet to `movies-api-java`.
 
 * Step 4.1: Open the Gradle build file:
   `dd-continuous-profiler-example/java/build.gradle`{{open}}
 
 * Step 4.2: Add the provided arguments as `applicationDefaultJvmArgs`:
 <pre class="file" data-filename="dd-continuous-profiler-example/java/build.gradle" data-target="insert" data-marker="    applicationDefaultJvmArgs = []">
-    applicationDefaultJvmArgs = [
+      applicationDefaultJvmArgs = [
         '-javaagent:dd-java-agent.jar',
         '-Ddd.profiling.enabled=true',
         '-XX:FlightRecorderOptions=stackdepth=256',
