@@ -8,43 +8,46 @@ for you by the lab. If you need to recall your credentials, type `creds`{{execut
 2. Navigate to the
 <a href="https://app.datadoghq.com/apm/docs?architecture=container-based&collection=Same%20host&environment=docker&language=java" target="_datadog">APM onboarding page</a>
 
-3. Follow the instructions:
+3. Let's follow the instructions:
 
-* Step 1: Choose your Environment and Application Language
+* Step 1: Choose your Environment and Application Language. We pick **Docker** ➡ **Same host** → **Java**
+* Step 2: Run the Agent.
+  We can run the agent using the following snippet (which already includes the API key listed in the using `creds`{{execute T1}}):
+  ```bash
+  docker run -d \
+    -v /var/run/docker.sock:/var/run/docker.sock:ro \
+    -v /proc/:/host/proc/:ro \
+    -v /sys/fs/cgroup/:/host/sys/fs/cgroup:ro \
+    -p 127.0.0.1:8126:8126/tcp \
+    -e DD_API_KEY=$DD_API_KEY \
+    datadog/agent:latest
+  ```{{execute T1}}
+  We can check if the agent is healthy using:
+  ```bash
+  docker exec -it `docker ps --filter "expose=8126" -q` agent status
+  ```{{execute T1}}
+  ```bash
+  ```
+* Step 3: Install the Java client.
+  `wget -O dd-java-agent.jar 'https://dtdg.co/latest-java-tracer'`{{execute T1}}
+* Step 4: Instrument your application.
+  Set the Service name to `movies-api-java`, the Environment name to `staging`, and enable _Automatically Inject Trace and Span IDs into Logs_, _Tracing Without Limits_ and _Continuous Profiling_.
 
-docker > same host > java
+* Step 4.1: Open the Gradle build file:
+  `dd-continuous-profiler-example/java/build.gradle`{{open}}
 
-* Step 2: Run the Agent
-
-(Here we're picking up the API key from an env var)
-
-```bash
-docker run -d \
-  -v /var/run/docker.sock:/var/run/docker.sock:ro \
-  -v /proc/:/host/proc/:ro \
-  -v /sys/fs/cgroup/:/host/sys/fs/cgroup:ro \
-  -p 127.0.0.1:8126:8126/tcp \
-  -e DD_API_KEY=$DD_API_KEY \
-  datadog/agent:latest
-```{{execute T1}}
-
-TODO: Check agent is healthy
-
-* Step 3: Install the Java client
-
-`wget -O dd-java-agent.jar 'https://dtdg.co/latest-java-tracer'`{{execute T1}}
-
-* Step 4: Instrument your application
-
-1. Modify `dd-continuous-profiler-example/java/build.gradle`{{open}}
-
-2. Add the provided arguments:
-
+* Step 4.2: Add the provided arguments as `applicationDefaultJvmArgs`:
 <pre class="file" data-filename="dd-continuous-profiler-example/java/build.gradle" data-target="insert" data-marker="    applicationDefaultJvmArgs = []">
     applicationDefaultJvmArgs = [
-        '-javaagent:dd-java-agent.jar', '-Ddd.profiling.enabled=true', '-XX:FlightRecorderOptions=stackdepth=256',
-        '-Ddd.logs.injection=true', '-Ddd.trace.sample.rate=1', '-Ddd.service=movies-api-java', '-Ddd.env=staging'
+        '-javaagent:dd-java-agent.jar',
+        '-Ddd.profiling.enabled=true',
+        '-XX:FlightRecorderOptions=stackdepth=256',
+        '-Ddd.logs.injection=true',
+        '-Ddd.trace.sample.rate=1',
+        '-Ddd.service=movies-api-java',
+        '-Ddd.env=staging'
     ]
 </pre>
 
-3. Re-run the application: `./gradlew run`{{execute interrupt T2}}
+4. Re-run the application using `./gradlew run`{{execute interrupt T2}} (👆_Double click_)
+5. We're done! You should see a `DATADOG TRACER CONFIGURATION` log message that confirms that the application is now collecting data.

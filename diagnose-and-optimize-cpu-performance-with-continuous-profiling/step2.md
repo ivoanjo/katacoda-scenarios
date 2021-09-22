@@ -9,4 +9,4 @@ _TODO: Sleep is a placeholder; we need to define an issue to use as well as how 
 
 ---
 
-To be able to investigate this issue further, let's add Datadog APM and Continuous Profiling to `movies-api-lava`.
+To be able to investigate this issue further, let's add Datadog APM and Continuous Profiling to `movies-api-java`.
