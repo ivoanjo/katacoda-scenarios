@@ -42,16 +42,15 @@ for you by the lab. If you need to recall your credentials, type `creds`{{execut
   * Step 4.2: Add the provided arguments as `applicationDefaultJvmArgs`:
 
   <pre class="file" data-filename="dd-continuous-profiler-example/java/build.gradle" data-target="insert" data-marker="    applicationDefaultJvmArgs = []">
-        applicationDefaultJvmArgs = [
-            '-javaagent:dd-java-agent.jar',
-            '-Ddd.profiling.enabled=true',
-            '-XX:FlightRecorderOptions=stackdepth=256',
-            '-Ddd.logs.injection=true',
-            '-Ddd.trace.sample.rate=1',
-            '-Ddd.service=movies-api-java',
-            '-Ddd.env=staging'
-        ]
-  </pre>
+       applicationDefaultJvmArgs = [
+           '-javaagent:dd-java-agent.jar',
+           '-Ddd.profiling.enabled=true',
+           '-XX:FlightRecorderOptions=stackdepth=256',
+           '-Ddd.logs.injection=true',
+           '-Ddd.trace.sample.rate=1',
+           '-Ddd.service=movies-api-java',
+           '-Ddd.env=staging'
+       ]</pre>
 4. Re-run the application using:
 
    `/root/lab/dd-continuous-profiler-example/java/gradlew run`{{execute interrupt T2}} (👆_Double click_)
