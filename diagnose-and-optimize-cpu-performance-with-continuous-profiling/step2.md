@@ -11,9 +11,9 @@ Let's try a different task: getting movie credits, for all movies with _Jurassic
 2. Observe that this endpoint seems to be quite slow:
 
   ```
-  real    0m7.186s
-  user    0m0.039s
-  sys     0m0.014s
+  real    0m4.208s
+  user    0m0.042s
+  sys     0m0.012s
   ```
 
   `movies-api-java` is taking a lot of time to respond to these queries, which makes for a poor user experience.
