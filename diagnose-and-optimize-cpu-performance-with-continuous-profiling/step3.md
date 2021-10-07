@@ -45,10 +45,10 @@ for you by the lab. If you need to recall your credentials, type `creds`{{execut
 
   * Step 4.2: Add the provided arguments as `applicationDefaultJvmArgs`:
 
-  <pre class="file" data-filename="dd-continuous-profiler-example/java/build.gradle" data-target="insert" data-marker="    applicationDefaultJvmArgs = ['-Xmx4g', '-Xms4g']">
+  <pre class="file" data-filename="dd-continuous-profiler-example/java/build.gradle" data-target="insert" data-marker="    applicationDefaultJvmArgs = ['-Xmx3g', '-Xms3g']">
        applicationDefaultJvmArgs = [
-           '-Xmx4g',
-           '-Xms4g',
+           '-Xmx3g',
+           '-Xms3g',
            '-javaagent:dd-java-agent.jar',
            '-Ddd.profiling.enabled=true',
            '-XX:FlightRecorderOptions=stackdepth=256',
