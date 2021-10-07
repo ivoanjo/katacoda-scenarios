@@ -12,4 +12,6 @@ Let's try a heavier task: getting movie credits, for all movies with the word _T
 
 3. *Presented Live*: Let's analyze this slow request using the Continuous Profiler.
 
+---
+
 Proceed to the next step to fix this performance issue on `movies-api-java`.

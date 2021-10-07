@@ -23,4 +23,7 @@ To do so:
 
 5. Locate the fixed request on the <a href="https://app.datadoghq.com/apm/traces" target="_datadog">Datadog APM Traces</a> page and confirm that no database queries are needed to respond.
 
+
+---
+
 Proceed to the next step to investigate another problematic request.

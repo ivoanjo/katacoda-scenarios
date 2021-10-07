@@ -61,4 +61,6 @@ for you by the lab. If you need to recall your credentials, type `creds`{{execut
 
 5. We're done! You should see a `DATADOG TRACER CONFIGURATION` log message that confirms that the application is now collecting data.
 
+---
+
 Proceed to the next step to continue analyzing `movies-api-java`.

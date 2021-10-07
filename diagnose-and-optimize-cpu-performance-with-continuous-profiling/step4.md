@@ -8,4 +8,6 @@ Let's revisit the problematic task: getting movie credits, for all movies with _
 
 3. *Presented Live*: What can we learn from the traced request using APM Traces?
 
+---
+
 Proceed to the next step to fix this performance issue on `movies-api-java`.

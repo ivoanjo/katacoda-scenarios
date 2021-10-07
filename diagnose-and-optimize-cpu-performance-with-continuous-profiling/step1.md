@@ -20,4 +20,6 @@ We've already cloned the repository above to the learning environment, so we can
 
   `curl -s http://localhost:8081/ | jq`{{execute T1}}
 
+---
+
 Proceed to the next step to start diagnosing a problematic request.

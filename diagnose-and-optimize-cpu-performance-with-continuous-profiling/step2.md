@@ -20,4 +20,6 @@ Let's try a different task: getting movie credits, for all movies with _Jurassic
 
   Why are these requests taking so long? Let's use the Datadog tools to find out.
 
+---
+
 Proceed to the next step to add Datadog APM and Continuous Profiling to `movies-api-java`.
