@@ -53,7 +53,8 @@ for you by the lab. If you need to recall your credentials, type `creds`{{execut
            '-Ddd.logs.injection=true',
            '-Ddd.trace.sample.rate=1',
            '-Ddd.service=movies-api-java',
-           '-Ddd.env=staging'
+           '-Ddd.env=staging',
+           "-Ddd.version=${new Date().toString()}", // Tag each run with a different version
        ]</pre>
 4. Re-run the application using:
 
