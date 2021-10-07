@@ -1,5 +1,5 @@
-As identified in the previous step, we want to cache the credits information,
-rather than re-reading it from the database on every new request.
+As identified in the previous step, we want to cache the credits information, rather than re-reading it from the
+database on every new request.
 
 To do so:
 
@@ -7,7 +7,7 @@ To do so:
 
   `dd-continuous-profiler-example/java/src/main/java/movies/Server.java`{{open}}
 
-2. Replace the `CREDITS` constant with a version that caches the credits:
+2. Replace the `CREDITS` supplier with a version that caches the credits:
 
   <pre class="file" data-filename="dd-continuous-profiler-example/java/src/main/java/movies/Server.java" data-target="insert" data-marker="CREDITS = () -> getAllFromMongo()">CREDITS = new CachedSupplier(() -> getAllFromMongo())</pre>
 
@@ -21,8 +21,8 @@ To do so:
 
   Observe that the performance of the endpoint, as measured using `time`, has now improved.
 
-5. Locate the fixed request on the <a href="https://app.datadoghq.com/apm/traces" target="_datadog">Datadog APM Traces</a> page and confirm that no database queries are needed to generate a response to this endpoint.
-
+5. Locate the fixed request on the <a href="https://app.datadoghq.com/apm/traces" target="_datadog">Datadog APM Traces</a> page
+and confirm that no database queries are needed to generate a response to this endpoint.
 
 ---
 

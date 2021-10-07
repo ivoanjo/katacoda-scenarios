@@ -1,5 +1,5 @@
-As identified in the previous step, the current implementation of the `creditsForMovie` method is rather inefficient.
-To fix it, let's use a _O(1)_ map lookup.
+As identified in the previous step, the current implementation of the `Server::creditsForMovie` method is rather inefficient.
+To fix it, let's use a _O(1)_ map lookup instead.
 
 1. Open the main `movies-api-java` source file:
 

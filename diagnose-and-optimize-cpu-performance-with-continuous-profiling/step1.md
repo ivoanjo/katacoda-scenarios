@@ -1,5 +1,5 @@
 As a running example, we'll use the `movies-api-java` service from
-<https://github.com/ivoanjo/dd-continuous-profiler-example>.
+<https://github.com/ivoanjo/dd-continuous-profiler-example> (**FIXME**).
 
 The `movies-api-service` service:
 
@@ -13,9 +13,11 @@ We've already cloned the repository above to the learning environment, so we can
 1. Let's run the `movies-api-java` service in the **Terminal for movies-api-java** tab:
 
   `cd /root/lab/dd-continuous-profiler-example/java/ && ./gradlew run`{{execute T2}} (👆_Double click_)
+
 2. After the service boots up, it can be accessed by going to:
 
   <https://[[HOST_SUBDOMAIN]]-8081-[[KATACODA_HOST]].environments.katacoda.com/>
+
 3. You can also use `curl` to interact with the service:
 
   `curl -s http://localhost:8081/ | jq`{{execute T1}}

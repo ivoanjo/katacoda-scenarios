@@ -12,7 +12,7 @@ for you by the lab. If you need to recall your credentials, type `creds`{{execut
   * Step 1: Choose your Environment and Application Language. We pick **Docker** ➡ **Same host** → **Java**
 
   * Step 2: Run the Agent.
-    We can run the datadog agent using the following snippet (which already includes the API key listed in the using `creds`{{execute T1}}):
+    We can run the Datadog agent using the following snippet (which already includes the API key shown in the `creds`{{execute T1}}):
     ```
     docker run -d \
       -v /var/run/docker.sock:/var/run/docker.sock:ro \
@@ -31,7 +31,7 @@ for you by the lab. If you need to recall your credentials, type `creds`{{execut
     `wget -O dd-java-agent.jar 'https://dtdg.co/latest-java-tracer'`{{execute T1}}
 
   * Step 4: Instrument your application.
-    We will set the Service name to `movies-api-java`, the Environment name to `staging`, and enable all three of
+    To do so, we will set the Service name to `movies-api-java`, the Environment name to `staging`, and enable all three of
 
     - ✅_Automatically Inject Trace and Span IDs into Logs_
     - ✅_Tracing Without Limits_
