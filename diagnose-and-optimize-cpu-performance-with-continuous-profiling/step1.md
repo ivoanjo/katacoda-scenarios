@@ -4,7 +4,7 @@ As a running example, we'll use the `movies-api-java` service from
 The `movies-api-service` service:
 
 * Provides an API to list and search for movies.
-* Is built using Java 11, using the [Gradle build tool](https://gradle.org/), the [Spark Web Framework](https://sparkjava.com/) and the
+* Is built using Java 11, using the [Gradle build tool](https://gradle.org/), the [Spark web framework](https://sparkjava.com/) and the
 [Jetty web server](https://www.eclipse.org/jetty/).
 
 We've already cloned the repository above to the learning environment, so we can jump right in!
