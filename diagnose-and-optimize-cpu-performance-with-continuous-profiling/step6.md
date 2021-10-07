@@ -4,7 +4,7 @@ Let's try a heavier task: getting movie credits, for all movies with the word _T
 
   `time curl -s http://localhost:8081/credits?q=the | jq`{{execute T1}}
 
-2. Observe that this endpoint seems to be very slow, even including the improvement from the previous step:
+2. Observe that this endpoint seems to be very slow, even when including the improvement from the previous step:
 
   ```
   real    0m23.675s

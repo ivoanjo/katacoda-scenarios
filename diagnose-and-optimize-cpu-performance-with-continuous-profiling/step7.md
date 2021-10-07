@@ -8,7 +8,7 @@ To fix it, let's use a _O(1)_ map lookup.
 2. Add a new `CREDITS_BY_MOVIE_ID` map:
 
   <pre class="file" data-filename="dd-continuous-profiler-example/java/src/main/java/movies/Server.java" data-target="insert" data-marker="// Placeholder for future improvement">
-private static volatile Supplier&gt;Map&gt;Integer, List&gt;Credit&lt;&lt;&lt; CREDITS_BY_MOVIEID = new CachedSupplier(() -> CREDITS.get().stream().collect(Collectors.groupingBy(c -> c.id)));
+private static volatile Supplier&lt;Map&lt;Integer, List&lt;Credit&gt;&gt;&gt; CREDITS_BY_MOVIE_ID = new CachedSupplier(() -> CREDITS.get().stream().collect(Collectors.groupingBy(c -> c.id)));
   </pre>
 
 3. ...and update the `creditsForMovie` method to use this map:
