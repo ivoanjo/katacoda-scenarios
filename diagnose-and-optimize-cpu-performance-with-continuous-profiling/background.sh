@@ -8,11 +8,11 @@ git clone https://github.com/ivoanjo/dd-continuous-profiler-example.git
 
 cd dd-continuous-profiler-example/java
 
-# Start up mongodb
-docker run -p 27017:27017 -v `pwd`/mongo-seed:/docker-entrypoint-initdb.d mongo:latest
+# # Start up mongodb
+# docker run -p 27017:27017 -v `pwd`/mongo-seed:/docker-entrypoint-initdb.d mongo:latest
 
-# Prewarm gradle
-./gradlew
+# # Prewarm gradle
+# ./gradlew
 
 statusupdate "environment to be ready..."
 
