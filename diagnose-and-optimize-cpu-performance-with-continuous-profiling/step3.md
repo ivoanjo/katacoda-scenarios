@@ -53,6 +53,6 @@ for you by the lab. If you need to recall your credentials, type `creds`{{execut
        ]</pre>
 4. Re-run the application using:
 
-   `/root/lab/dd-continuous-profiler-example/java/gradlew run`{{execute interrupt T2}} (👆_Double click_)
+   `cd /root/lab/dd-continuous-profiler-example/java/ && ./gradlew run`{{execute interrupt T2}} (👆_Double click_)
 
 5. We're done! You should see a `DATADOG TRACER CONFIGURATION` log message that confirms that the application is now collecting data.
