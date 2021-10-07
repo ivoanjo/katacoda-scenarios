@@ -12,7 +12,7 @@ for you by the lab. If you need to recall your credentials, type `creds`{{execut
   * Step 1: Choose your Environment and Application Language. We pick **Docker** ➡ **Same host** → **Java**
 
   * Step 2: Run the Agent.
-    We can run the agent using the following snippet (which already includes the API key listed in the using `creds`{{execute T1}}):
+    We can run the datadog agent using the following snippet (which already includes the API key listed in the using `creds`{{execute T1}}):
     ```
     docker run -d \
       -v /var/run/docker.sock:/var/run/docker.sock:ro \
@@ -32,7 +32,11 @@ for you by the lab. If you need to recall your credentials, type `creds`{{execut
 
   * Step 4: Instrument your application.
     Set the Service name to `movies-api-java`, the Environment name to `staging`, and enable all three of
-    ✅_Automatically Inject Trace and Span IDs into Logs_, ✅_Tracing Without Limits_ and ✅_Continuous Profiling_.
+
+    - ✅_Automatically Inject Trace and Span IDs into Logs_
+    - ✅_Tracing Without Limits_
+    - ✅_Continuous Profiling_
+
     We're now ready to apply the resulting configuration snippet to `movies-api-java`.
 
   * Step 4.1: Open the Gradle build file:
@@ -56,3 +60,5 @@ for you by the lab. If you need to recall your credentials, type `creds`{{execut
    `cd /root/lab/dd-continuous-profiler-example/java/ && ./gradlew run`{{execute interrupt T2}} (👆_Double click_)
 
 5. We're done! You should see a `DATADOG TRACER CONFIGURATION` log message that confirms that the application is now collecting data.
+
+Proceed to the next step to continue analyzing `movies-api-java`.

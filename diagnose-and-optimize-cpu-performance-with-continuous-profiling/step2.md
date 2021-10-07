@@ -1,8 +1,8 @@
 Up until now, everything seems to be going well in `movies-api-java`-land.
 
-Let's try a different endpoint: getting movie credits, for all movies with _Jurassic_ in their name.
+Let's try a different task: getting movie credits, for all movies with _Jurassic_ in their name.
 
-1. Run `curl` again to query for this information:
+1. Run `curl` to query for this information:
 
   `time curl -s http://localhost:8081/credits?q=jurassic | jq`{{execute T1}}
 
@@ -18,4 +18,6 @@ Let's try a different endpoint: getting movie credits, for all movies with _Jura
 
   `movies-api-java` is taking a lot of time to respond to these queries, which makes for a poor user experience.
 
-To be able to investigate this issue further, let's add Datadog APM and Continuous Profiling to `movies-api-java`.
+  Why are these requests taking so long? Let's use the Datadog tools to find out.
+
+Proceed to the next step to add Datadog APM and Continuous Profiling to `movies-api-java`.

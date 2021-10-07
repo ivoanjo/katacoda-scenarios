@@ -19,3 +19,5 @@ We've already cloned the repository above to the learning environment, so we can
 3. You can also use `curl` to interact with the service:
 
   `curl -s http://localhost:8081/ | jq`{{execute T1}}
+
+Proceed to the next step to start diagnosing a problematic request.

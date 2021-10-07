@@ -1,6 +1,11 @@
-1. Let's run the problematic request again: `time curl http://localhost:8081/sleep`{{execute T1}}
+Let's revisit the problematic task: getting movie credits, for all movies with _Jurassic_ in their title.
+
+1. Run `curl` to query for this information:
+
+  `time curl -s http://localhost:8081/credits?q=jurassic | jq`{{execute T1}}
+
 2. Browse to the <a href="https://app.datadoghq.com/apm/traces" target="_datadog">Datadog APM Traces</a> page and find the request.
 
----
-_TODO: Next steps depend on the issue we pick. Also, how much should we type here vs present live?_
----
+3. *Presented Live*: What can we learn from the traced request using APM Traces?
+
+Proceed to the next step to fix this performance issue on `movies-api-java`.

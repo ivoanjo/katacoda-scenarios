@@ -22,12 +22,16 @@
         "text": "step4.md"
       },
       {
-        "title": "Diagnose performance issue using Profiling",
+        "title": "Fix performance issue pinpointed using Tracing",
         "text": "step5.md"
       },
       {
-        "title": "Fix performance issue and validate fix",
+        "title": "Diagnose performance issue using Profiling",
         "text": "step6.md"
+      },
+      {
+        "title": "Fix performance issue and validate fix",
+        "text": "step7.md"
       }
     ],
     "intro": {
