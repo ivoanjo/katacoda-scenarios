@@ -21,7 +21,7 @@ To do so:
 
   Observe that the performance of the endpoint, as measured using `time`, has now improved.
 
-5. Locate the fixed request on the <a href="https://app.datadoghq.com/apm/traces" target="_datadog">Datadog APM Traces</a> page and confirm that no database queries are needed to respond.
+5. Locate the fixed request on the <a href="https://app.datadoghq.com/apm/traces" target="_datadog">Datadog APM Traces</a> page and confirm that no database queries are needed to generate a response to this endpoint.
 
 
 ---

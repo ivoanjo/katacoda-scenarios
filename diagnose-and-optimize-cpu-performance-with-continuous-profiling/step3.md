@@ -31,7 +31,7 @@ for you by the lab. If you need to recall your credentials, type `creds`{{execut
     `wget -O dd-java-agent.jar 'https://dtdg.co/latest-java-tracer'`{{execute T1}}
 
   * Step 4: Instrument your application.
-    Set the Service name to `movies-api-java`, the Environment name to `staging`, and enable all three of
+    We will set the Service name to `movies-api-java`, the Environment name to `staging`, and enable all three of
 
     - ✅_Automatically Inject Trace and Span IDs into Logs_
     - ✅_Tracing Without Limits_

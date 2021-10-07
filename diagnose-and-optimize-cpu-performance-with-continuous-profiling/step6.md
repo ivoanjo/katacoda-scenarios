@@ -7,10 +7,12 @@ Let's try a heavier task: getting movie credits, for all movies with the word _T
 2. Observe that this endpoint seems to be very slow, even including the improvement from the previous step:
 
   ```
-  FIXME example time output
+  real    0m23.675s
+  user    0m2.994s
+  sys     0m2.104s
   ```
 
-3. *Presented Live*: Let's analyze this slow request using the Continuous Profiler.
+3. **Presented Live**: _Let's analyze this slow request using the Continuous Profiler._
 
 ---
 

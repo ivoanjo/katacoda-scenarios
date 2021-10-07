@@ -6,7 +6,7 @@ Let's revisit the problematic task: getting movie credits, for all movies with _
 
 2. Browse to the <a href="https://app.datadoghq.com/apm/traces" target="_datadog">Datadog APM Traces</a> page and find the request.
 
-3. *Presented Live*: What can we learn from the traced request using APM Traces?
+3. **Presented Live**: _What can we learn from the traced request using APM Traces?_
 
 ---
 

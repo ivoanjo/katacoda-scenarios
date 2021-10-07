@@ -18,7 +18,7 @@ Let's try a different task: getting movie credits, for all movies with _Jurassic
 
   `movies-api-java` is taking a lot of time to respond to these queries, which makes for a poor user experience.
 
-  Why are these requests taking so long? Let's use the Datadog tools to find out.
+  Why are these requests taking so long? Let's use Datadog to find out.
 
 ---
 
