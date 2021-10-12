@@ -41,11 +41,11 @@ for you by the lab. If you need to recall your credentials, type `creds`{{execut
 
   * Step 4.1: Open the Gradle build file:
 
-    `dd-continuous-profiler-example/java/build.gradle`{{open}}
+    `dd-continuous-profiler-dash2021/build.gradle`{{open}}
 
   * Step 4.2: Add the provided arguments as `applicationDefaultJvmArgs`:
 
-  <pre class="file" data-filename="dd-continuous-profiler-example/java/build.gradle" data-target="insert" data-marker="    applicationDefaultJvmArgs = ['-Xmx3g', '-Xms3g']">
+  <pre class="file" data-filename="dd-continuous-profiler-dash2021/build.gradle" data-target="insert" data-marker="    applicationDefaultJvmArgs = ['-Xmx3g', '-Xms3g']">
        applicationDefaultJvmArgs = [
            '-Xmx3g',
            '-Xms3g',
@@ -60,7 +60,7 @@ for you by the lab. If you need to recall your credentials, type `creds`{{execut
        ]</pre>
 4. Re-run the application using:
 
-   `cd /root/lab/dd-continuous-profiler-example/java/ && ./gradlew run`{{execute interrupt T2}} (👆_Double click_)
+   `cd lab/dd-continuous-profiler-dash2021 && ./gradlew run`{{execute interrupt T2}} (👆_Double click_)
 
 5. We're done! You should see a `DATADOG TRACER CONFIGURATION` log message that confirms that the application is now collecting data.
 

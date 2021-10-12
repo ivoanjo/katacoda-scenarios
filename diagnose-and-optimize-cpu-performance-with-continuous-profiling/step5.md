@@ -5,15 +5,15 @@ To do so:
 
 1. Open the main `movies-api-java` source file:
 
-  `dd-continuous-profiler-example/java/src/main/java/movies/Server.java`{{open}}
+  `dd-continuous-profiler-dash2021/src/main/java/movies/Server.java`{{open}}
 
 2. Replace the `CREDITS` supplier with a version that caches the credits:
 
-  <pre class="file" data-filename="dd-continuous-profiler-example/java/src/main/java/movies/Server.java" data-target="insert" data-marker="CREDITS = () -> getAllFromMongo()">CREDITS = new CachedSupplier(() -> getAllFromMongo())</pre>
+  <pre class="file" data-filename="dd-continuous-profiler-dash2021/src/main/java/movies/Server.java" data-target="insert" data-marker="CREDITS = Server::loadCredits">CREDITS = Suppliers.memoize(Server::loadCredits)</pre>
 
 3. Re-run the application using:
 
-   `cd /root/lab/dd-continuous-profiler-example/java/ && ./gradlew run`{{execute interrupt T2}} (👆_Double click_)
+   `cd lab/dd-continuous-profiler-dash2021 && ./gradlew run`{{execute interrupt T2}} (👆_Double click_)
 
 4. Run `curl` to repeat our query:
 

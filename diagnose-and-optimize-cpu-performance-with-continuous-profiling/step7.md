@@ -3,21 +3,21 @@ To fix it, let's use a _O(1)_ map lookup instead.
 
 1. Open the main `movies-api-java` source file:
 
-  `dd-continuous-profiler-example/java/src/main/java/movies/Server.java`{{open}}
+  `dd-continuous-profiler-dash2021/src/main/java/movies/Server.java`{{open}}
 
 2. Add a new `CREDITS_BY_MOVIE_ID` map:
 
-  <pre class="file" data-filename="dd-continuous-profiler-example/java/src/main/java/movies/Server.java" data-target="insert" data-marker="// Placeholder for future improvement">
-private static volatile Supplier&lt;Map&lt;Integer, List&lt;Credit&gt;&gt;&gt; CREDITS_BY_MOVIE_ID = new CachedSupplier(() -> CREDITS.get().stream().collect(Collectors.groupingBy(c -> c.id)));
+  <pre class="file" data-filename="dd-continuous-profiler-dash2021/src/main/java/movies/Server.java" data-target="insert" data-marker="// Placeholder for future improvement">
+private static volatile Supplier&lt;Map&lt;Integer, List&lt;Credit&gt;&gt;&gt; CREDITS_BY_MOVIE_ID = Suppliers.memoize(() -> CREDITS.get().stream().collect(Collectors.groupingBy(c -> c.id)));
   </pre>
 
 3. ...and update the `creditsForMovie` method to use this map:
 
-  <pre class="file" data-filename="dd-continuous-profiler-example/java/src/main/java/movies/Server.java" data-target="insert" data-marker="CREDITS.get().stream().filter(c -> c.id.equals(movie.id)).collect(Collectors.toList())">CREDITS_BY_MOVIE_ID.get().get(movie.id)</pre>
+  <pre class="file" data-filename="dd-continuous-profiler-dash2021/src/main/java/movies/Server.java" data-target="insert" data-marker="CREDITS.get().stream().filter(c -> c.id.equals(movie.id)).collect(Collectors.toList())">CREDITS_BY_MOVIE_ID.get().get(movie.id)</pre>
 
 4. Re-run the application using:
 
-   `cd /root/lab/dd-continuous-profiler-example/java/ && ./gradlew run`{{execute interrupt T2}} (👆_Double click_)
+   `cd lab/dd-continuous-profiler-dash2021 && ./gradlew run`{{execute interrupt T2}} (👆_Double click_)
 
 5. Run `curl` to repeat our query:
 
@@ -30,5 +30,7 @@ private static volatile Supplier&lt;Map&lt;Integer, List&lt;Credit&gt;&gt;&gt; C
 ---
 
 This marks the end of the guided journey to `movies-api-java`.
+
+**Optional Side quest**: The movies endpoint (`http://localhost:8081/movies?q=jurassic`) also has a few performance problems. Can you spot them?
 
 Proceed to the next step to conclude this workshop.
