@@ -11,7 +11,7 @@ cd dd-continuous-profiler-dash2021
 docker-compose up -d movies-api-mongo
 
 # Prewarm gradle
-./gradlew compileJava
+#./gradlew compileJava
 
 statusupdate "environment to be ready..."
 
