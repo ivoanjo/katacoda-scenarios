@@ -13,7 +13,7 @@ To do so:
 
 3. Re-run the application using:
 
-   `cd lab/dd-continuous-profiler-dash2021 && ./gradlew run`{{execute interrupt T2}} (👆_Double click_)
+   `cd /root/lab/dd-continuous-profiler-dash2021 && ./gradlew run`{{execute interrupt T2}} (👆_Double click_)
 
 4. Run `curl` to repeat our query:
 

@@ -17,7 +17,7 @@ private static volatile Supplier&lt;Map&lt;Integer, List&lt;Credit&gt;&gt;&gt; C
 
 4. Re-run the application using:
 
-   `cd lab/dd-continuous-profiler-dash2021 && ./gradlew run`{{execute interrupt T2}} (👆_Double click_)
+   `cd /root/lab/dd-continuous-profiler-dash2021 && ./gradlew run`{{execute interrupt T2}} (👆_Double click_)
 
 5. Run `curl` to repeat our query:
 

@@ -12,7 +12,7 @@ We've already cloned the repository above to the learning environment, so we can
 
 1. Let's run the `movies-api-java` service in the **Terminal for movies-api-java** tab:
 
-  `cd lab/dd-continuous-profiler-dash2021 && ./gradlew run`{{execute T2}} (👆_Double click_)
+  `cd /root/lab/dd-continuous-profiler-dash2021 && ./gradlew run`{{execute T2}} (👆_Double click_)
 
 2. After the service boots up, it can be accessed by going to:
 
