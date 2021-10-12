@@ -21,7 +21,7 @@ private static final Supplier&lt;Map&lt;String, List&lt;Credit&gt;&gt;&gt; CREDI
 
 5. Run `curl` to repeat our query:
 
-  `time curl -s http://localhost:8081/credits?q=the >> /dev/null`{{execute T1}}
+  `time curl http://localhost:8081/credits?q=the >> /dev/null`{{execute T1}}
 
   Observe that the performance of the endpoint, as measured using `time`, has now improved.
 

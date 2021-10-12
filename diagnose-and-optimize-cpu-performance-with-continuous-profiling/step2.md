@@ -4,7 +4,7 @@ Let's try a different task: getting movie credits, for all movies with _Jurassic
 
 1. Run `curl` to query for this information:
 
-  `time curl -s http://localhost:8081/credits?q=jurassic | jq`{{execute T1}}
+  `time curl http://localhost:8081/credits?q=jurassic | jq`{{execute T1}}
 
   (You can also use your browser or local terminal to query <https://[[HOST_SUBDOMAIN]]-8081-[[KATACODA_HOST]].environments.katacoda.com/credits?q=jurassic>)
 

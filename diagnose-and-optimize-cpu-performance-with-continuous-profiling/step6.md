@@ -2,7 +2,7 @@ Let's try a heavier task: getting movie credits, for all movies with the word _T
 
 1. Run `curl` to query for this information:
 
-  `time curl -s http://localhost:8081/credits?q=the >> /dev/null`{{execute T1}}
+  `time curl http://localhost:8081/credits?q=the >> /dev/null`{{execute T1}}
 
 2. Observe that this request is very slow, even after we include the improvement from the previous step:
 

@@ -2,7 +2,7 @@ Let's revisit the problematic task: getting movie credits, for all movies with _
 
 1. Run `curl` to query for this information:
 
-  `time curl -s http://localhost:8081/credits?q=jurassic | jq`{{execute T1}}
+  `time curl http://localhost:8081/credits?q=jurassic | jq`{{execute T1}}
 
 2. Browse to the <a href="https://app.datadoghq.com/apm/traces" target="_datadog">Datadog APM Traces</a> page and find the request.
 
