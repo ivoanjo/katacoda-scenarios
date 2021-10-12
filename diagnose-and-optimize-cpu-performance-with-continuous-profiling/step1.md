@@ -1,5 +1,5 @@
 As a running example, we'll use the `movies-api-java` service from
-<https://github.com/ivoanjo/dd-continuous-profiler-dash2021> (**FIXME**).
+<https://github.com/DataDog/dd-continuous-profiler-dash2021/>.
 
 The `movies-api-service` service:
 
