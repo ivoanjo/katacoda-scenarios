@@ -1,19 +1,29 @@
-Let's try a heavier task: getting movie credits, for all movies with the word _The_ in their title.
+As identified in the previous step, we want to cache the credits information, rather than re-reading it from the
+database on every new request.
 
-1. Run `curl` to query for this information:
+To do so:
 
-  `time curl http://localhost:8081/credits?q=the >> /dev/null`{{execute T1}}
+1. Open the main `movies-api-java` source file:
 
-2. Observe that this request is very slow, even after we include the improvement from the previous step:
+  `dd-continuous-profiler-dash2021/src/main/java/movies/Server.java`{{open}}
 
-  ```
-  real    0m6.179s
-  user    0m0.011s
-  sys     0m0.011s
-  ```
+2. Replace the `CREDITS` supplier with a version that caches (_memoizes_) the credits:
 
-3. **Presented Live**: _Let's analyze this slow request using the Continuous Profiler._
+  <pre class="file" data-filename="dd-continuous-profiler-dash2021/src/main/java/movies/Server.java" data-target="insert" data-marker="CREDITS = Server::loadCredits">CREDITS = Suppliers.memoize(Server::loadCredits)</pre>
+
+3. Re-run the application using:
+
+   `cd /root/lab/dd-continuous-profiler-dash2021 && ./gradlew run`{{execute interrupt T2}} (👆_Double click_)
+
+4. Run `curl` to repeat our query:
+
+  `time curl http://localhost:8081/credits?q=jurassic | jq`{{execute T1}}
+
+  Observe that the performance of the endpoint, as measured using `time`, has now improved.
+
+5. Locate the fixed request on the <a href="https://app.datadoghq.com/apm/traces" target="_datadog">Datadog APM Traces</a> page
+and confirm that no database queries are needed to generate a response to this endpoint.
 
 ---
 
-Proceed to the next step to fix this performance issue on `movies-api-java`.
+Proceed to the next step to investigate another problematic request.

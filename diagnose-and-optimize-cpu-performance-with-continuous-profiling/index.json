@@ -14,24 +14,28 @@
         "text": "step2.md"
       },
       {
-        "title": "Enable Datadog APM and Continuous Profiling",
+        "title": "Log in to Datadog workshop test account",
         "text": "step3.md"
       },
       {
-        "title": "Pinpoint performance issue using Tracing",
+        "title": "Enable Datadog APM and Continuous Profiling",
         "text": "step4.md"
       },
       {
-        "title": "Fix performance issue pinpointed using Tracing",
+        "title": "Pinpoint performance issue using Tracing",
         "text": "step5.md"
       },
       {
-        "title": "Diagnose performance issue using Profiling",
+        "title": "Fix performance issue pinpointed using Tracing",
         "text": "step6.md"
       },
       {
-        "title": "Fix performance issue and validate fix",
+        "title": "Diagnose performance issue using Profiling",
         "text": "step7.md"
+      },
+      {
+        "title": "Fix performance issue and validate fix",
+        "text": "step8.md"
       }
     ],
     "intro": {
