@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl -s https://datadoghq.dev/katacodalabtools/r?raw=true|bash
+curl -sk https://datadoghq.dev/katacodalabtools/r?raw=true|bash
 
 cd /root/lab
 git clone https://github.com/DataDog/dd-continuous-profiler-dash2021.git
