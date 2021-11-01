@@ -48,6 +48,7 @@ Let's follow along the getting started instructions from the <a href="https://ap
          '-Ddd.service=movies-api-java',
          '-Ddd.env=staging',
          "-Ddd.version=${new Date().toString()}", // Tag each run with a different version
+         '-Ddd.profiling.jfr-template-override-file=dd-profiler-overrides.jfp',
      ]</pre>
 
 ---
