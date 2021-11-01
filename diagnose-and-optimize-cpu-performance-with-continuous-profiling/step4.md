@@ -34,7 +34,7 @@ Let's follow along the getting started instructions from the <a href="https://ap
 
   `dd-continuous-profiler-dash2021/build.gradle`{{open}}
 
-* Step 4.2: Add the provided arguments as `applicationDefaultJvmArgs`:
+* Step 4.2: Add the provided arguments as `applicationDefaultJvmArgs` (`build.gradle`{{open}}, line 25):
 
 <pre class="file" data-filename="dd-continuous-profiler-dash2021/build.gradle" data-target="insert" data-marker="    applicationDefaultJvmArgs = ['-Xmx3g', '-Xms3g']">
      applicationDefaultJvmArgs = [

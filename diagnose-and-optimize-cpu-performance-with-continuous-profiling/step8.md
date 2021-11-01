@@ -5,13 +5,13 @@ To fix it, let's use a _O(1)_ map lookup instead.
 
   `dd-continuous-profiler-dash2021/src/main/java/movies/Server.java`{{open}}
 
-2. Add a new `CREDITS_BY_MOVIE_ID` map:
+2. Add a new `CREDITS_BY_MOVIE_ID` map (`Server.java`{{open}}, line 37):
 
   <pre class="file" data-filename="dd-continuous-profiler-dash2021/src/main/java/movies/Server.java" data-target="insert" data-marker="// Placeholder for future improvement">
 private static final Supplier&lt;Map&lt;String, List&lt;Credit&gt;&gt;&gt; CREDITS_BY_MOVIE_ID = Suppliers.memoize(() -> CREDITS.get().stream().collect(Collectors.groupingBy(c -> c.id)));
   </pre>
 
-3. ...and update the `creditsForMovie` method to use this map:
+3. ...and update the `creditsForMovie` method to use this map (`Server.java`{{open}}, line 77):
 
   <pre class="file" data-filename="dd-continuous-profiler-dash2021/src/main/java/movies/Server.java" data-target="insert" data-marker="CREDITS.get().stream().filter(c -> c.id.equals(movie.id)).collect(Collectors.toList())">CREDITS_BY_MOVIE_ID.get().get(movie.id)</pre>
 

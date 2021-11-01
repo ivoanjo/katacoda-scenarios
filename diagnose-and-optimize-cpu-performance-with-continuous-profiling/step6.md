@@ -7,7 +7,7 @@ To do so:
 
   `dd-continuous-profiler-dash2021/src/main/java/movies/Server.java`{{open}}
 
-2. Replace the `CREDITS` supplier with a version that caches (_memoizes_) the credits:
+2. Replace the `CREDITS` supplier (`Server.java`{{open}}, line 36) with a version that caches (_memoizes_) the credits:
 
   <pre class="file" data-filename="dd-continuous-profiler-dash2021/src/main/java/movies/Server.java" data-target="insert" data-marker="CREDITS = Server::loadCredits">CREDITS = Suppliers.memoize(Server::loadCredits)</pre>
 
